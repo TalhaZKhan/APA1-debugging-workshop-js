@@ -1,6 +1,7 @@
 function convertFromPenceToPounds(pence) {
-  const pounds = pence / 100;
-  return `£${Math.round(pounds)}`; // Format to two decimal places
+  var pounds = pence / 100;
+  pounds = pounds.toFixed(2);
+  return `£${pounds}`; // Format to two decimal places
 }
 
 module.exports = { convertFromPenceToPounds };
