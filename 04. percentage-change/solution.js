@@ -1,8 +1,10 @@
 function calculatePercentageChange(original, newAmount) {
-  const difference = Math.abs(newAmount - original);
-  const average = (original - newAmount) / 2;
-  const percentageDifference = (average / difference) * 100;
-  return percentageDifference.toFixed(2);
+  if(original == newAmount){
+    return 0
+  }
+  const difference = newAmount - original;
+  const percentageDifference = (difference/original) * 100;
+  return Number(percentageDifference.toFixed(0));
 }
 
 module.exports = { calculatePercentageChange };
